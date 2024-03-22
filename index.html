@@ -17,18 +17,22 @@
   <body>
     <header class="container header">
       <img src="images/logo-bookmark.svg" alt="" class="logo" />
-      <nav>
+      <nav class="header__nav">
         <ul class="header__list">
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Contact</li>
+          <li><a href="#features" class="header__item">Features</a></li>
+          <li><a href="#extension" class="header__item">Pricing</a></li>
+          <li><a href="#footer" class="header__item">Contact</a></li>
           <li><button class="header__btn btn">LOGIN</button></li>
+          <div class="socials header__socials">
+            <img src="images/icon-facebook.svg" alt="" />
+            <img src="images/icon-twitter.svg" alt="" />
+          </div>
         </ul>
         <img src="images/icon-hamburger.svg" alt="" class="header__hamburger" />
       </nav>
     </header>
     <section class="container hero">
-      <article class="text">
+      <article class="text__right">
         <h1 class="hero__title">A Simple Bookmark Manager</h1>
         <p class="subtitle">
           A clean and simple interface to organize your favourite websites. Open
@@ -43,7 +47,7 @@
         <img src="images/illustration-hero.svg" alt="" />
       </div>
     </section>
-    <section class="container features">
+    <section class="container features" id="features">
       <div class="text">
         <h3>Features</h3>
         <p class="subtitle">
@@ -53,16 +57,16 @@
         </p>
       </div>
       <div class="features__btns">
-        <button class="feature__option feature-active">
+        <button class="feature__option feature-active" value="1">
           Simple Bookmarking
         </button>
-        <button class="feature__option">Speedy Searching</button>
-        <button class="feature__option">Easy Sharing</button>
+        <button class="feature__option" value="2">Speedy Searching</button>
+        <button class="feature__option" value="3">Easy Sharing</button>
       </div>
       <div class="feature__content">
-        <article class="text">
+        <article class="text__right">
           <h3 class="feature__title">Bookmark in one click</h3>
-          <p class="subtitle">
+          <p class="subtitle feature__subtitle">
             Organize your bookmarks however you like. Our simple drag-and-drop
             interface gives you complete control over how you manage your
             favourite sites.
@@ -74,7 +78,7 @@
         </div>
       </div>
     </section>
-    <section class="container extension">
+    <section class="container extension" id="extension">
       <div class="text">
         <h3>Download the extension</h3>
         <p class="subtitle">
@@ -83,7 +87,7 @@
         </p>
       </div>
       <div class="extension__cards">
-        <div class="extension__card">
+        <div class="extension__card extension-hidden">
           <img src="images/logo-chrome.svg" alt="" class="extension__img" />
           <div class="extension__title">
             <h4 class="extension__accent">Add to Chrome</h4>
@@ -92,7 +96,7 @@
           <img src="images/bg-dots.svg" alt="" />
           <button class="extension__btn btn">Add & Install Extension</button>
         </div>
-        <div class="extension__card">
+        <div class="extension__card extension-hidden">
           <img src="images/logo-firefox.svg" alt="" class="extension__img" />
           <div class="extension__title">
             <h4 class="extension__accent">Add to Firefox</h4>
@@ -101,7 +105,7 @@
           <img src="images/bg-dots.svg" alt="" />
           <button class="extension__btn btn">Add & Install Extension</button>
         </div>
-        <div class="extension__card">
+        <div class="extension__card extension-hidden">
           <img src="images/logo-opera.svg" alt="" class="extension__img" />
           <div class="extension__title">
             <h4 class="extension__accent">Add to Opera</h4>
@@ -175,15 +179,21 @@
         <h3 class="banner__title">Stay up-to-date with what we’re doing</h3>
       </div>
       <form action="#" class="banner__form">
-        <input
-          type="email"
-          class="banner__input input"
-          placeholder="Enter your email adress"
-        />
+        <div class="banner__errors">
+          <input
+            type="email"
+            class="banner__input input"
+            placeholder="Enter your email adress"
+          />
+          <img src="images/icon-error.svg" alt="" class="error-img" />
+          <div class="error-banner">
+            <p>Whoops, make sure it's an email</p>
+          </div>
+        </div>
         <button type="submit" class="banner__btn btn">Contact Us</button>
       </form>
     </section>
-    <footer class="container footer">
+    <footer class="container footer" id="footer">
       <nav>
         <ul class="footer__list">
           <li>
@@ -193,23 +203,16 @@
               class="footer__logo logo"
             />
           </li>
-          <li class="footer__li">Features</li>
-          <li class="footer__li">Pricing</li>
-          <li class="footer__li">Contact</li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#extension">Pricing</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
       </nav>
-      <div class="footer__socials">
+      <div class="socials">
         <img src="images/icon-facebook.svg" alt="" />
         <img src="images/icon-twitter.svg" alt="" />
       </div>
     </footer>
-    <!-- 
-
-  Contact Us
-
-  Features
-  Pricing
-  Contact -->
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
   </body>
 </html>
